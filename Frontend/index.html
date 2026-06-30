@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Portal - Smart Career Matches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Job Portal</div>
+        <ul class="nav-links">
+            <span id="userWelcome"></span>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="recommendation.html">AI Recommendation</a></li>
+            <li><a href="recruiter-dashboard.html">Recruiter</a></li>
+            <li><a href="admin-dashboard.html">Admin</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Connect with Your Dream Career Instantly</h1>
+        <p>
+            Get smart semantic recommendations, parse candidate resumes automatically, and find matching job portfolios dynamically.
+        </p>
+        <a href="jobs.html" class="btn"><i class="fas fa-search"></i> Search Available Jobs</a>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <i class="fas fa-magic" style="font-size: 32px; color: var(--primary); margin-bottom: 16px;"></i>
+            <h3>Semantic Matchmaking</h3>
+            <p>Calculate alignment matching between profiles and database descriptions dynamically.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-file-invoice" style="font-size: 32px; color: var(--primary); margin-bottom: 16px;"></i>
+            <h3>Safe Resume Storage</h3>
+            <p>Upload your CV (PDF/DOCX) securely to H2 tables and retrieve it with custom download headers.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-sliders-h" style="font-size: 32px; color: var(--primary); margin-bottom: 16px;"></i>
+            <h3>Multi-Criteria Filters</h3>
+            <p>Filter open roles instantly by keyword matching, location options, and company titles.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line" style="font-size: 32px; color: var(--primary); margin-bottom: 16px;"></i>
+            <h3>Management Dashboards</h3>
+            <p>Monitor system registrations, recruiter activity, and candidate pipelines from centralized panels.</p>
+        </div>
+    </section>
+
+    <section class="stats" style="margin-bottom: 40px;">
+        <div class="stat-box">
+            <h2>50+</h2>
+            <p>Jobs Posted</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>120+</h2>
+            <p>Active Companies</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>340+</h2>
+            <p>Total Candidates</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="applicationCount">0</h2>
+            <p>Applications Submitted</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AI Job Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

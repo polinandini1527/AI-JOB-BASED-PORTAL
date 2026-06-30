@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posted Jobs - AI Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Job Portal</div>
+        <ul class="nav-links">
+            <span id="userWelcome"></span>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="recommendation.html">AI Recommendation</a></li>
+            <li><a href="recruiter-dashboard.html">Recruiter</a></li>
+            <li><a href="admin-dashboard.html">Admin</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">Posted Jobs</h1>
+
+    <div class="job-container" id="jobsContainer">
+        <!-- Rendered dynamically by script -->
+    </div>
+
+    <footer>
+        <p>© 2026 AI Job Portal</p>
+    </footer>
+
+    <script>
+    fetch("http://localhost:8082/jobs")
+    .then(res => res.json())
+    .then(jobs => {
+        let container = document.getElementById("jobsContainer");
+        if (jobs.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state" style="grid-column: 1 / -1;">
+                    <p>No Jobs Posted Yet</p>
+                </div>
+            `;
+        } else {
+            container.innerHTML = "";
+            jobs.forEach(job => {
+                container.innerHTML += `
+                    <div class="job-card">
+                        <h3>${job.title}</h3>
+                        <p class="company"><i class="fas fa-building"></i> ${job.company}</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ${job.location}</p>
+                    </div>
+                `;
+            });
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        document.getElementById("jobsContainer").innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <p>Failed to load posted jobs</p>
+            </div>
+        `;
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

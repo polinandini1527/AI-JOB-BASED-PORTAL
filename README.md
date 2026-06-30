@@ -300,25 +300,6 @@ Use the default accounts seeded in the database to test the portal:
 
 ---
 
-## 📸 Screenshots
-The following screenshot placeholders represent the polished layout states:
-
-### Home Page
-![Home Page Placeholder](https://placehold.co/800x450/4f46e5/ffffff?text=AI+Job+Portal+Home)
-
-### Login & Registration
-![Auth Placement](https://placehold.co/800x450/4f46e5/ffffff?text=Login+and+Signup+Forms)
-
-### Jobs Board & Filters
-![Jobs Placement](https://placehold.co/800x450/4f46e5/ffffff?text=Career+Board+and+Location+Filters)
-
-### Candidate Profile & Uploader
-![Profile Placement](https://placehold.co/800x450/4f46e5/ffffff?text=Candidate+Profile+and+Resume+Upload)
-
-### Recruiter & Admin Dashboards
-![Dashboards Placement](https://placehold.co/800x450/4f46e5/ffffff?text=Recruiter+Metrics+and+Job+Postings)
-
----
 
 ## 🔮 Future Enhancements
 - **JWT Authentication**: Secure stateless token sessions instead of plain mapping.
@@ -335,7 +316,7 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 ---
 
 ## 👤 Author
-**NANDINI**
+**POLI NANDINI**
 *Java Full Stack Developer*
-- **Workspace Name**: NANDINI
+- **Workspace Name**:POLI NANDINI
 - **Target Role**: Java Full Stack Developer

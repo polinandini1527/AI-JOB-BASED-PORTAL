@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Profile - AI Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Job Portal</div>
+        <ul class="nav-links">
+            <span id="userWelcome"></span>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="recommendation.html">AI Recommendation</a></li>
+            <li><a href="recruiter-dashboard.html">Recruiter</a></li>
+            <li><a href="admin-dashboard.html">Admin</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">Candidate Profile</h1>
+
+    <div class="profile-card">
+        <div class="profile-avatar" id="profileAvatar">U</div>
+        
+        <div class="profile-info">
+            <h4>Name</h4>
+            <p id="candidateName">Loading...</p>
+        </div>
+
+        <div class="profile-info">
+            <h4>Email Address</h4>
+            <p id="candidateEmail">Loading...</p>
+        </div>
+
+        <div class="profile-info">
+            <h4>Key Skills</h4>
+            <p id="candidateSkills">Loading...</p>
+        </div>
+
+        <div class="profile-info">
+            <h4>Resume File</h4>
+            <p id="resumeName">No resume uploaded</p>
+        </div>
+
+        <div class="profile-actions">
+            <div class="file-input-wrapper">
+                <button class="btn btn-secondary"><i class="fas fa-file-alt"></i> Choose Resume</button>
+                <input type="file" id="resume" onchange="updateFileNameLabel()">
+            </div>
+            <p id="fileChosenLabel" style="font-size: 14px; color: var(--text-muted); font-weight: 600; margin-top: 4px;"></p>
+            <button class="btn" onclick="uploadResume()"><i class="fas fa-cloud-upload-alt"></i> Upload Selected Resume</button>
+            <button class="btn btn-secondary" id="editProfileBtn" onclick="toggleEditProfile()"><i class="fas fa-user-edit"></i> Edit Profile</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 AI Job Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

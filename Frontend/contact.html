@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AI Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Job Portal</div>
+        <ul class="nav-links">
+            <span id="userWelcome"></span>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="recommendation.html">AI Recommendation</a></li>
+            <li><a href="recruiter-dashboard.html">Recruiter</a></li>
+            <li><a href="admin-dashboard.html">Admin</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Contact Support</h2>
+        <p style="color: var(--text-muted); text-align: center; margin-bottom: 24px; font-weight: 500;">
+            We'd love to hear from you. Send us a message!
+        </p>
+
+        <form onsubmit="event.preventDefault(); showToast('Message Sent Successfully!', 'success'); this.reset();">
+            <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" placeholder="Enter Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" placeholder="Type your message here..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2026 AI Job Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
